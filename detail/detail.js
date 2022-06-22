@@ -1,23 +1,25 @@
 // import services and utilities
-import { getBeanies } from './services/beanies-service.js';
+import { getBeanie } from '../services/beanies-service.js';
 // import component creators
-import createBeanieList from './components/beanieList.js';
+import createBeanieDetails from '../components/beanieDetails.js';
 // declare state variables
-import state from './state.js';
+import state from '../state.js';
 // write handler functions
 async function handleLoadPage() {
-    state.beanies = await getBeanies();
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    state.beanie = await getBeanie(id);
     display();
 }
 // Create each component: 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
-const beaniesList = createBeanieList(document.querySelector('#beanie-cards'));
+const beanieDetails = createBeanieDetails(document.querySelector('#details'));
 
 // Roll-up display function that renders (calls with state) each component
 function display() {
     // Call each component passing in props that are the pieces of state this component needs
-    beaniesList({ beanies: state.beanies });
+    beanieDetails({ beanie: state.beanie });
 }
 
 // Call display on page load

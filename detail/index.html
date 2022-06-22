@@ -12,24 +12,33 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/details.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <title>Web MVC UI</title>
 </head>
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web MVC UI</h1>
+        <a href="../index.html"><img src="/assets/html_css_js.png"></a>
+        <h1 id="page-name"></h1>
     </header>
 
-    <main>
-        <ul class="beanie-cards" id="beanie-cards"></ul>
+    <main id="details">
+        <div>
+            <h2 class="beanie-name"></h2>
+            <img class="beanie-img">
+        </div>
+        <div class="p-text">
+            <p class="birthday"></p>
+            <p class="release"></p>
+            <p class="theme"></p>
+            <p class="astro"></p> 
+        </div>
     </main>
 
     <footer>&copy;2022 Aspiring Software Developer</footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="detail.js"></script>
 </body>
 
 </html>

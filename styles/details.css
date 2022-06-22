@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    text-align: center;
+}
+
+div {
+    font-size: 2rem;
+}
+
+.p-text {
+    margin-top: 180px;
+}

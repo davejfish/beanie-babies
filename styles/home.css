@@ -3,7 +3,7 @@
 .beanie-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: 200px;
+    grid-template-rows: 300px;
     gap: 15px;
 }
 
@@ -21,6 +21,7 @@
 }
 
 .card img {
-    width: 100px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }

@@ -1,11 +1,14 @@
 // import services and utilities
-
+import { getBeanies } from './services/beanies-service.js';
 // import component creators
 import createBeanieList from './components/beanieList.js';
 // declare state variables
 import state from './state.js';
 // write handler functions
-
+async function handleLoadPage() {
+    state.beanies = await getBeanies();
+    display();
+}
 // Create each component: 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
@@ -18,5 +21,4 @@ function display() {
 }
 
 // Call display on page load
-// handleLoadPage();
-display();
+handleLoadPage();

@@ -17,10 +17,10 @@ export function beanieCard({ beanie }) {
 
     const img = document.createElement('img');
     img.src = beanie.image;
-    img.alt = beanie.name;
+    img.alt = beanie.title;
 
     const h2 = document.createElement('h2');
-    h2.textContent = beanie.name;
+    h2.textContent = beanie.title;
 
     a.append(img, h2);
     li.append(a);

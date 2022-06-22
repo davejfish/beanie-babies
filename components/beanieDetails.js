@@ -8,9 +8,9 @@ export default function createBeanieDetails(root) {
         head.textContent = beanie.title;
         name.textContent = beanie.title;
         img.src = beanie.image;
-        birthday.textContent = beanie.birthday;
-        release.textContent = beanie.releaseDate;
-        theme.textContent = beanie.theme;
-        astro.textContent = beanie.astroSign;
+        birthday.textContent = `birthday: ${beanie.birthday}`;
+        release.textContent = `release date: ${beanie.releaseDate}`;
+        theme.textContent = `theme: ${beanie.theme}`;
+        astro.textContent = `star sign: ${beanie.astroSign}`;
     };
 }
